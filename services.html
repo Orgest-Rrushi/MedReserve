@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shërbimet - Klinika Mjekësore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MedReserve</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
+                    <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
+                    <li><a href="services.html" class="active" data-translate="services">Shërbimet</a></li>
+                    <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
+                    <li><a href="contact.html" data-translate="contact">Kontakti</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="lang-sq" class="active">SQ</button>
+                <button id="lang-en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-translate="our-services">Shërbimet Tona</h1>
+        </div>
+    </section>
+
+    <section class="services-detail">
+        <div class="container">
+            <p class="services-intro" data-translate="services-intro">
+                Në MedReserve, ne ofrojmë një gamë të gjerë shërbimesh mjekësore për të përmbushur nevojat tuaja shëndetësore. Ekipi ynë i mjekëve të kualifikuar është i përkushtuar për t'ju ofruar kujdesin më të mirë të mundshëm.
+            </p>
+
+            <div class="service-detail-item">
+                <div class="service-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-translate="cardiology">Kardiologji</h3>
+                    <p data-translate="cardiology-full-desc">
+                        Departamenti ynë i Kardiologjisë ofron diagnostikim dhe trajtim të plotë për një gamë të gjerë të sëmundjeve kardiovaskulare. Shërbimet tona përfshijnë:
+                    </p>
+                    <ul>
+                        <li data-translate="cardiology-service-1">Ekzaminime kardiake të plota</li>
+                        <li data-translate="cardiology-service-2">Elektrokardiogramë (EKG)</li>
+                        <li data-translate="cardiology-service-3">Ekokardiografi</li>
+                        <li data-translate="cardiology-service-4">Test stresi</li>
+                        <li data-translate="cardiology-service-5">Monitorim Holter</li>
+                        <li data-translate="cardiology-service-6">Këshillim për parandalimin e sëmundjeve të zemrës</li>
+                    </ul>
+                    <a href="reservation.html?service=cardiology" class="btn" data-translate="book-service">Rezervo Shërbim</a>
+                </div>
+            </div>
+
+            <div class="service-detail-item">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-translate="neurology">Neurologji</h3>
+                    <p data-translate="neurology-full-desc">
+                        Departamenti ynë i Neurologjisë ofron diagnostikim dhe trajtim për çrregullimet e sistemit nervor. Shërbimet tona përfshijnë:
+                    </p>
+                    <ul>
+                        <li data-translate="neurology-service-1">Ekzaminime neurologjike të plota</li>
+                        <li data-translate="neurology-service-2">Elektroencefalografi (EEG)</li>
+                        <li data-translate="neurology-service-3">Elektromiografi (EMG)</li>
+                        <li data-translate="neurology-service-4">Trajtim për dhimbje koke dhe migrenë</li>
+                        <li data-translate="neurology-service-5">Trajtim për epilepsi</li>
+                        <li data-translate="neurology-service-6">Trajtim për çrregullime të lëvizjes</li>
+                    </ul>
+                    <a href="reservation.html?service=neurology" class="btn" data-translate="book-service">Rezervo Shërbim</a>
+                </div>
+            </div>
+
+            <div class="service-detail-item">
+                <div class="service-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-translate="dentistry">Stomatologji</h3>
+                    <p data-translate="dentistry-full-desc">
+                        Departamenti ynë i Stomatologjisë ofron një gamë të plotë të shërbimeve dentare për të gjithë familjen. Shërbimet tona përfshijnë:
+                    </p>
+                    <ul>
+                        <li data-translate="dentistry-service-1">Kontrolle dhe pastrimi rutinë</li>
+                        <li data-translate="dentistry-service-2">Mbushje dhe restaurime</li>
+                        <li data-translate="dentistry-service-3">Trajtim të kanalit të rrënjës</li>
+                        <li data-translate="dentistry-service-4">Ekstraksione</li>
+                        <li data-translate="dentistry-service-5">Implante dentare</li>
+                        <li data-translate="dentistry-service-6">Zbardhim dhëmbësh</li>
+                        <li data-translate="dentistry-service-7">Ortodonci</li>
+                    </ul>
+                    <a href="reservation.html?service=dentistry" class="btn" data-translate="book-service">Rezervo Shërbim</a>
+                </div>
+            </div>
+
+            <div class="service-detail-item">
+                <div class="service-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-translate="ophthalmology">Oftalmologji</h3>
+                    <p data-translate="ophthalmology-full-desc">
+                        Departamenti ynë i Oftalmologjisë ofron kujdes të plotë për shëndetin e syve tuaj. Shërbimet tona përfshijnë:
+                    </p>
+                    <ul>
+                        <li data-translate="ophthalmology-service-1">Ekzaminime të plota të syve</li>
+                        <li data-translate="ophthalmology-service-2">Receta për syze dhe lente kontakti</li>
+                        <li data-translate="ophthalmology-service-3">Diagnostikim dhe trajtim i glaukomës</li>
+                        <li data-translate="ophthalmology-service-4">Diagnostikim dhe trajtim i kataraktit</li>
+                        <li data-translate="ophthalmology-service-5">Kirurgji refraktive (LASIK)</li>
+                        <li data-translate="ophthalmology-service-6">Trajtim për sëmundjet e retinës</li>
+                    </ul>
+                    <a href="reservation.html?service=ophthalmology" class="btn" data-translate="book-service">Rezervo Shërbim</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="insurance">
+        <div class="container">
+            <h2 class="section-title" data-translate="insurance-title">Sigurimet Shëndetësore</h2>
+            <p data-translate="insurance-desc">Ne pranojmë një gamë të gjerë të sigurimeve shëndetësore për të bërë kujdesin shëndetësor më të përballueshëm për ju.</p>
+            
+            <div class="insurance-logos">
+                <div class="insurance-logo">
+                    <img src="img/insurance1.png" alt="Insurance 1">
+                </div>
+                <div class="insurance-logo">
+                    <img src="img/insurance2.png" alt="Insurance 2">
+                </div>
+                <div class="insurance-logo">
+                    <img src="img/insurance3.png" alt="Insurance 3">
+                </div>
+                <div class="insurance-logo">
+                    <img src="img/insurance4.png" alt="Insurance 4">
+                </div>
+            </div>
+            
+            <p data-translate="insurance-contact">Për më shumë informacion mbi mbulimin e sigurimit, ju lutemi <a href="contact.html">na kontaktoni</a>.</p>
+        </div>
+    </section>
+
+    <div class="chatbot-container">
+        <div class="chatbot-icon" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot-box" id="chatbot-box">
+            <div class="chatbot-header">
+                <h3 data-translate="chat-with-us">Bisedo me Ne</h3>
+                <button id="close-chatbot"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    <p data-translate="chatbot-welcome">Përshëndetje! Si mund t'ju ndihmoj sot me rezervimin tuaj?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj...">
+                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedReserve</h3>
+                    <p data-translate="footer-desc">Platforma juaj e besueshme për rezervime mjekësore online.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="quick-links">Lidhje të Shpejta</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
+                        <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
+                        <li><a href="services.html" data-translate="services">Shërbimet</a></li>
+                        <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="contact-us">Na Kontaktoni</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
+                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

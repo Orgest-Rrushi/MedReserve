@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinika Mjekësore - Rezervimet Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MedReserve</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="home">Kryefaqja</a></li>
+                    <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
+                    <li><a href="services.html" data-translate="services">Shërbimet</a></li>
+                    <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
+                    <li><a href="contact.html" data-translate="contact">Kontakti</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="lang-sq" class="active">SQ</button>
+                <button id="lang-en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 data-translate="hero-title">Kujdesi Shëndetësor i Personalizuar</h2>
+                <p data-translate="hero-text">Rezervoni takimin tuaj mjekësor online në mënyrë të thjeshtë dhe të shpejtë.</p>
+                <a href="reservation.html" class="btn" data-translate="book-now">Rezervo Tani</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/doctor.jpg" alt="Doctor" id="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title" data-translate="our-services">Shërbimet Tona</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3 data-translate="cardiology">Kardiologji</h3>
+                    <p data-translate="cardiology-desc">Diagnostikimi dhe trajtimi i sëmundjeve të zemrës nga specialistët tanë.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-brain"></i>
+                    <h3 data-translate="neurology">Neurologji</h3>
+                    <p data-translate="neurology-desc">Kujdes i specializuar për çështjet e sistemit nervor.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tooth"></i>
+                    <h3 data-translate="dentistry">Stomatologji</h3>
+                    <p data-translate="dentistry-desc">Shërbime dentare të plota për të gjithë familjen.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-eye"></i>
+                    <h3 data-translate="ophthalmology">Oftalmologji</h3>
+                    <p data-translate="ophthalmology-desc">Kujdes i specializuar për shëndetin e syve tuaj.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-translate="how-it-works">Si Funksionon</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-translate="step1-title">Zgjidhni Specialistin</h3>
+                    <p data-translate="step1-desc">Shfletoni listën e mjekëve tanë dhe zgjidhni specialistin e duhur për nevojat tuaja.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-translate="step2-title">Zgjidhni Datën dhe Orën</h3>
+                    <p data-translate="step2-desc">Zgjidhni një datë dhe orë që ju përshtatet nga oraret e disponueshme.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-translate="step3-title">Konfirmoni Rezervimin</h3>
+                    <p data-translate="step3-desc">Plotësoni të dhënat tuaja dhe konfirmoni rezervimin tuaj.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-translate="testimonials">Çfarë Thonë Pacientët Tanë</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p data-translate="testimonial1-text">"Shërbim i shkëlqyer dhe staf shumë profesional. Procesi i rezervimit ishte shumë i thjeshtë."</p>
+                    <div class="testimonial-author" data-translate="testimonial1-author">- Arben Malaj</div>
+                </div>
+                <div class="testimonial">
+                    <p data-translate="testimonial2-text">"Mjekët janë shumë të kujdesshëm dhe të vëmendshëm. Rekomandoj këtë klinikë për të gjithë."</p>
+                    <div class="testimonial-author" data-translate="testimonial2-author">- Elona Hoxha</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chatbot-container">
+        <div class="chatbot-icon" id="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot-box" id="chatbot-box">
+            <div class="chatbot-header">
+                <h3 data-translate="chat-with-us">Bisedo me Ne</h3>
+                <button id="close-chatbot"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    <p data-translate="chatbot-welcome">Përshëndetje! Si mund t'ju ndihmoj sot me rezervimin tuaj?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj...">
+                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedReserve</h3>
+                    <p data-translate="footer-desc">Platforma juaj e besueshme për rezervime mjekësore online.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="quick-links">Lidhje të Shpejta</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
+                        <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
+                        <li><a href="services.html" data-translate="services">Shërbimet</a></li>
+                        <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="contact-us">Na Kontaktoni</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
+                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
