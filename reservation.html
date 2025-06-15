@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezervimi - Klinika Mjekësore</title>
+    <meta name="description" content="MedReserve - Rezervoni takimin tuaj mjekësor" data-translate="meta-reservation-description">
+    <title data-translate="reservation-page-title">Rezervimi - Klinika Mjekësore</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Preload important resources -->
+    <link rel="preload" href="./img/form-bg.jpg" as="image">
 </head>
 <body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link" data-translate="skip-link">Kaloni te përmbajtja</a>
+
     <header>
         <div class="container">
             <div class="logo">
                 <h1>MedReserve</h1>
             </div>
-            <nav>
+
+            <!-- Main Navigation -->
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
                     <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
@@ -22,109 +36,158 @@
                     <li><a href="contact.html" data-translate="contact">Kontakti</a></li>
                 </ul>
             </nav>
-            <div class="language-selector">
-                <button id="lang-sq" class="active">SQ</button>
-                <button id="lang-en">EN</button>
+
+            <!-- Language Switcher -->
+            <div class="language-selector" aria-label="Language selector">
+                <button id="lang-sq" class="active" aria-label="Shqip">SQ</button>
+                <button id="lang-en" aria-label="English">EN</button>
             </div>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 data-translate="make-reservation">Bëj një Rezervim</h1>
-        </div>
-    </section>
-
-    <section class="reservation-form">
-        <div class="container">
-            <div class="form-container">
-                <form id="appointment-form">
-                    <div class="form-group">
-                        <label for="service" data-translate="select-service">Zgjidhni Shërbimin</label>
-                        <select id="service" name="service" required>
-                            <option value="" data-translate="choose-service">Zgjidhni një shërbim</option>
-                            <option value="cardiology" data-translate="cardiology">Kardiologji</option>
-                            <option value="neurology" data-translate="neurology">Neurologji</option>
-                            <option value="dentistry" data-translate="dentistry">Stomatologji</option>
-                            <option value="ophthalmology" data-translate="ophthalmology">Oftalmologji</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="doctor" data-translate="select-doctor">Zgjidhni Mjekun</label>
-                        <select id="doctor" name="doctor" required>
-                            <option value="" data-translate="choose-doctor">Zgjidhni një mjek</option>
-                            <!-- Will be populated based on service selection -->
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="date" data-translate="select-date">Zgjidhni Datën</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="time" data-translate="select-time">Zgjidhni Orën</label>
-                        <select id="time" name="time" required>
-                            <option value="" data-translate="choose-time">Zgjidhni një orë</option>
-                            <!-- Will be populated based on date selection -->
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="name" data-translate="your-name">Emri Juaj</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" data-translate="your-email">Email-i Juaj</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone" data-translate="your-phone">Numri i Telefonit</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="notes" data-translate="notes">Shënime (opsionale)</label>
-                        <textarea id="notes" name="notes" rows="4"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" data-translate="confirm-reservation">Konfirmo Rezervimin</button>
-                </form>
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-header-heading">
+            <div class="container">
+                <h1 id="page-header-heading" data-translate="make-reservation">Bëj një Rezervim</h1>
             </div>
-            
-            <div class="reservation-info">
-                <h3 data-translate="reservation-info">Informacion për Rezervimin</h3>
-                <p data-translate="reservation-info-text">Pasi të konfirmoni rezervimin tuaj, do të merrni një email konfirmimi me detajet e takimit tuaj. Ju lutemi paraqituni 15 minuta para orës së caktuar.</p>
-                
-                <div class="contact-info">
-                    <h4 data-translate="need-help">Keni nevojë për ndihmë?</h4>
-                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
-                    <p><i class="fas fa-envelope"></i> rezervime@medreserve.al</p>
+        </section>
+
+        <!-- Reservation Section -->
+        <section class="reservation-form-section" aria-labelledby="reservation-form-heading">
+            <div class="container">
+                <div class="reservation-grid">
+                    <!-- Form Container -->
+                    <div class="form-container">
+                        <h2 id="reservation-form-heading" class="sr-only" data-translate="reservation-form-title">Formulari i Rezervimit</h2>
+
+                        <form id="appointment-form" novalidate>
+                            <!-- Service Selection -->
+                            <div class="form-group">
+                                <label for="service" data-translate="select-service">Zgjidhni Shërbimin</label>
+                                <select id="service" name="service" required aria-required="true">
+                                    <option value="" selected disabled data-translate="choose-service">Zgjidhni një shërbim</option>
+                                    <option value="cardiology" data-translate="cardiology">Kardiologji</option>
+                                    <option value="neurology" data-translate="neurology">Neurologji</option>
+                                    <option value="dentistry" data-translate="dentistry">Stomatologji</option>
+                                    <option value="ophthalmology" data-translate="ophthalmology">Oftalmologji</option>
+                                </select>
+                                <div class="error-message" id="service-error" aria-live="polite"></div>
+                            </div>
+
+                            <!-- Doctor Selection -->
+                            <div class="form-group">
+                                <label for="doctor" data-translate="select-doctor">Zgjidhni Mjekun</label>
+                                <select id="doctor" name="doctor" required aria-required="true" disabled>
+                                    <option value="" selected disabled data-translate="choose-doctor">Zgjidhni një mjek</option>
+                                </select>
+                                <div class="error-message" id="doctor-error" aria-live="polite"></div>
+                            </div>
+
+                            <!-- Date Selection -->
+                            <div class="form-group">
+                                <label for="date" data-translate="select-date">Zgjidhni Datën</label>
+                                <input type="date" id="date" name="date" required aria-required="true" min="">
+                                <div class="error-message" id="date-error" aria-live="polite"></div>
+                            </div>
+
+                            <!-- Time Selection -->
+                            <div class="form-group">
+                                <label for="time" data-translate="select-time">Zgjidhni Orën</label>
+                                <select id="time" name="time" required aria-required="true" disabled>
+                                    <option value="" selected disabled data-translate="choose-time">Zgjidhni një orë</option>
+                                </select>
+                                <div class="error-message" id="time-error" aria-live="polite"></div>
+                            </div>
+
+                            <!-- Patient Information -->
+                            <fieldset class="patient-info">
+                                <legend data-translate="patient-info">Informacion i Pacientit</legend>
+
+                                <div class="form-group">
+                                    <label for="name" data-translate="your-name">Emri Juaj</label>
+                                    <input type="text" id="name" name="name" required aria-required="true">
+                                    <div class="error-message" id="name-error" aria-live="polite"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" data-translate="your-email">Email-i Juaj</label>
+                                    <input type="email" id="email" name="email" required aria-required="true">
+                                    <div class="error-message" id="email-error" aria-live="polite"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" data-translate="your-phone">Numri i Telefonit</label>
+                                    <input type="tel" id="phone" name="phone" required aria-required="true">
+                                    <div class="error-message" id="phone-error" aria-live="polite"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="notes" data-translate="notes">Shënime (opsionale)</label>
+                                    <textarea id="notes" name="notes" rows="4"></textarea>
+                                </div>
+                            </fieldset>
+
+                            <button type="submit" class="btn btn-primary" data-translate="confirm-reservation">Konfirmo Rezervimin</button>
+                        </form>
+                    </div>
+
+                    <!-- Reservation Info -->
+                    <aside class="reservation-info" aria-labelledby="reservation-info-heading">
+                        <div class="info-card">
+                            <h2 id="reservation-info-heading" data-translate="reservation-info">Informacion për Rezervimin</h2>
+                            <div class="info-content">
+                                <p data-translate="reservation-info-text">
+                                    Pasi të konfirmoni rezervimin tuaj, do të merrni një email konfirmimi me detajet e takimit tuaj.
+                                    Ju lutemi paraqituni 15 minuta para orës së caktuar.
+                                </p>
+
+                                <div class="info-icon-item">
+                                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                                    <p data-translate="reservation-reminder">Mbaj mend datën dhe orën e takimit tuaj</p>
+                                </div>
+
+                                <div class="info-icon-item">
+                                    <i class="fas fa-file-medical" aria-hidden="true"></i>
+                                    <p data-translate="bring-documents">Sillni dokumentet e nevojshme mjekësore</p>
+                                </div>
+
+                                <div class="contact-info">
+                                    <h3 data-translate="need-help">Keni nevojë për ndihmë?</h3>
+                                    <p><i class="fas fa-phone" aria-hidden="true"></i> +355 69 123 4567</p>
+                                    <p><i class="fas fa-envelope" aria-hidden="true"></i> rezervime@medreserve.al</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
+    <!-- Chatbot Widget -->
     <div class="chatbot-container">
-        <div class="chatbot-icon" id="chatbot-toggle">
-            <i class="fas fa-comments"></i>
+        <div class="chatbot-icon" id="chatbot-toggle" aria-label="Open chat" role="button" tabindex="0">
+            <i class="fas fa-comments" aria-hidden="true"></i>
         </div>
-        <div class="chatbot-box" id="chatbot-box">
+        <div class="chatbot-box" id="chatbot-box" aria-modal="true" role="dialog" aria-labelledby="chatbot-heading" hidden>
             <div class="chatbot-header">
-                <h3 data-translate="chat-with-us">Bisedo me Ne</h3>
-                <button id="close-chatbot"><i class="fas fa-times"></i></button>
+                <h3 id="chatbot-heading" data-translate="chat-with-us">Bisedo me Ne</h3>
+                <button id="close-chatbot" aria-label="Close chat">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
             </div>
-            <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chatbot-messages" id="chatbot-messages" role="log">
                 <div class="message bot">
                     <p data-translate="chatbot-welcome">Përshëndetje! Si mund t'ju ndihmoj sot me rezervimin tuaj?</p>
                 </div>
             </div>
             <div class="chatbot-input">
-                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj...">
-                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                <label for="user-input" class="sr-only" data-translate="type-message">Shkruani mesazhin tuaj</label>
+                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj..." aria-labelledby="chatbot-heading">
+                <button id="send-message" aria-label="Send message">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -132,10 +195,13 @@
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- About Section -->
                 <div class="footer-section">
                     <h3>MedReserve</h3>
                     <p data-translate="footer-desc">Platforma juaj e besueshme për rezervime mjekësore online.</p>
                 </div>
+
+                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3 data-translate="quick-links">Lidhje të Shpejta</h3>
                     <ul>
@@ -145,47 +211,49 @@
                         <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact Info -->
                 <div class="footer-section">
                     <h3 data-translate="contact-us">Na Kontaktoni</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
-                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
-                    <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> info@medreserve.al</p>
+                    </address>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2025 MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
+                <p>&copy; <span id="current-year">2025</span> MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="./js/translations.js"></script>
     <script src="./js/language-switcher.js"></script>
     <script src="./js/reservation.js"></script>
     <script src="./js/chatbot.js"></script>
     <script src="./js/main.js"></script>
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
-    authDomain: "medreserve-c4727.firebaseapp.com",
-    projectId: "medreserve-c4727",
-    storageBucket: "medreserve-c4727.firebasestorage.app",
-    messagingSenderId: "471960012100",
-    appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
-    measurementId: "G-63WKXV10R1"
-  };
+        const firebaseConfig = {
+            apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
+            authDomain: "medreserve-c4727.firebaseapp.com",
+            projectId: "medreserve-c4727",
+            storageBucket: "medreserve-c4727.firebasestorage.app",
+            messagingSenderId: "471960012100",
+            appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
+            measurementId: "G-63WKXV10R1"
+        };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
