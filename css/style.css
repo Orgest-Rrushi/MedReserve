@@ -1,896 +1,1243 @@
-/* Reset and Base Styles */
+﻿/* ======================
+   Reset and Base Styles
+   ====================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 a {
-  text-decoration: none;
-  color: #2a7de1;
+    text-decoration: none;
+    color: #2a7de1;
+    transition: color 0.3s ease;
 }
 
+    a:hover {
+        color: #1c5db0;
+    }
+
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* ======================
+   Button Styles
+   ====================== */
 .btn {
-  display: inline-block;
-  background-color: #2a7de1;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  border: none;
-  cursor: pointer;
+    display: inline-block;
+    background-color: #2a7de1;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
-.btn:hover {
-  background-color: #1c5db0;
-}
+    .btn:hover {
+        background-color: #1c5db0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
 .btn-primary {
-  background-color: #2a7de1;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.2rem;
-  color: #333;
-}
-
-/* Header Styles */
-header {
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-
-.logo h1 {
-  font-size: 1.8rem;
-  color: #2a7de1;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #333;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #2a7de1;
-  background-color: rgba(42, 125, 225, 0.1);
-}
-
-.language-selector {
-  display: flex;
-  align-items: center;
-}
-
-.language-selector button {
-  background: none;
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  margin-left: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: 500;
-}
-
-.language-selector button.active {
-  background-color: #2a7de1;
-  color: white;
-  border-color: #2a7de1;
-}
-
-/* Hero Section */
-.hero {
-  padding: 60px 0;
-  background-color: #f0f7ff;
-}
-
-.hero .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero-content {
-  flex: 1;
-  padding-right: 40px;
-}
-
-.hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  color: #666;
-}
-
-.hero-image {
-  flex: 1;
-  text-align: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Services Section */
-.services {
-  padding: 80px 0;
-  background-color: white;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 30px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.service-card i {
-  font-size: 2.5rem;
-  color: #2a7de1;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.service-card p {
-  color: #666;
-}
-
-/* How It Works Section */
-.how-it-works {
-  padding: 80px 0;
-  background-color: #f9f9f9;
-}
-
-.steps {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.step {
-  flex: 1;
-  min-width: 250px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-.step-number {
-  position: absolute;
-  top: -20px;
-  left: 30px;
-  width: 40px;
-  height: 40px;
-  background-color: #2a7de1;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.step h3 {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-  color: #333;
-}
-
-.step p {
-  color: #666;
-}
-
-/* Testimonials Section */
-.testimonials {
-  padding: 80px 0;
-  background-color: white;
-}
-
-.testimonial-slider {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.testimonial {
-  background-color: #f0f7ff;
-  border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.testimonial p {
-  font-style: italic;
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  color: #555;
-}
-
-.testimonial-author {
-  font-weight: 600;
-  color: #333;
-}
-
-/* Chatbot Styles */
-.chatbot-container {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1000;
-}
-
-.chatbot-icon {
-  width: 60px;
-  height: 60px;
-  background-color: #2a7de1;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.chatbot-icon i {
-  color: white;
-  font-size: 1.5rem;
-}
-
-.chatbot-box {
-  position: absolute;
-  bottom: 80px;
-  right: 0;
-  width: 350px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  display: none;
-}
-
-.chatbot-header {
-  background-color: #2a7de1;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.chatbot-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.chatbot-header button {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.chatbot-messages {
-  height: 300px;
-  overflow-y: auto;
-  padding: 15px;
-}
-
-.message {
-  margin-bottom: 15px;
-  padding: 10px 15px;
-  border-radius: 18px;
-  max-width: 80%;
-}
-
-.message.user {
-  background-color: #e6f2ff;
-  margin-left: auto;
-  border-bottom-right-radius: 5px;
-}
-
-.message.bot {
-  background-color: #f1f1f1;
-  margin-right: auto;
-  border-bottom-left-radius: 5px;
-}
-
-.chatbot-input {
-  display: flex;
-  padding: 10px;
-  border-top: 1px solid #eee;
-}
-
-.chatbot-input input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  outline: none;
-}
-
-.chatbot-input button {
-  background-color: #2a7de1;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 60px 0 20px;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-  margin-bottom: 30px;
-}
-
-.footer-section h3 {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.footer-section p {
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  color: #ccc;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #2a7de1;
-}
-
-.footer-section i {
-  margin-right: 10px;
-  color: #2a7de1;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #444;
-}
-
-.footer-bottom p {
-  color: #ccc;
-}
-
-/* Page Header */
-.page-header {
-  background-color: #f0f7ff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  color: #333;
-}
-
-/* Reservation Form */
-.reservation-form {
-  padding: 60px 0;
-  background-color: white;
-}
-
-.reservation-form .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.form-container {
-  flex: 2;
-  min-width: 300px;
-}
-
-.reservation-info {
-  flex: 1;
-  min-width: 250px;
-  background-color: #f0f7ff;
-  padding: 30px;
-  border-radius: 8px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
-
-.reservation-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.reservation-info p {
-  margin-bottom: 20px;
-  color: #666;
-}
-
-.contact-info {
-  margin-top: 30px;
-}
-
-.contact-info h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.contact-info p {
-  margin-bottom: 10px;
-}
-
-.contact-info i {
-  color: #2a7de1;
-  margin-right: 10px;
-}
-
-/* Doctors Page Styles */
-.doctors {
-  padding: 60px 0;
-  background-color: white;
-}
-
-.specialty-section {
-  margin-bottom: 60px;
-}
-
-.specialty-section h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #2a7de1;
-}
-
-.doctors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.doctor-card {
-  display: flex;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.doctor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.doctor-image {
-  flex: 1;
-  max-width: 120px;
-}
-
-.doctor-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.doctor-info {
-  flex: 2;
-  padding: 20px;
-}
-
-.doctor-info h4 {
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.doctor-specialty {
-  color: #2a7de1;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.doctor-description {
-  margin-bottom: 15px;
-  color: #666;
-  font-size: 0.95rem;
+    background-color: #2a7de1;
 }
 
 .btn-sm {
-  padding: 8px 16px;
-  font-size: 0.9rem;
+    padding: 8px 16px;
+    font-size: 0.9rem;
 }
 
-/* Services Detail Page Styles */
+/* ======================
+   Header Styles
+   ====================== */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #2a7de1;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+}
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+        nav ul li a {
+            color: #333;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+            nav ul li a:hover,
+            nav ul li a.active {
+                color: #2a7de1;
+                background-color: rgba(42, 125, 225, 0.1);
+            }
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+    .language-selector button {
+        background: none;
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+        margin-left: 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+        .language-selector button.active {
+            background-color: #2a7de1;
+            color: white;
+            border-color: #2a7de1;
+        }
+
+/* ======================
+   Hero Section
+   ====================== */
+.hero {
+    padding: 80px 0;
+    background-color: #f0f7ff;
+}
+
+    .hero .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+.hero-content {
+    flex: 1;
+}
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #666;
+        max-width: 600px;
+    }
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+    }
+
+    .hero-image:hover img {
+        transform: scale(1.03);
+    }
+
+/* ======================
+   Main Content Sections
+   ====================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: #2a7de1;
+    }
+
+.page-header {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f0f7ff;
+}
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+/* ======================
+   Services Section
+   ====================== */
+.services {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card i {
+        font-size: 2.5rem;
+        color: #2a7de1;
+        margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .service-card p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+.btn-link {
+    color: #2a7de1;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .btn-link::after {
+        content: '→';
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-link:hover::after {
+        transform: translateX(3px);
+    }
+
+/* ======================
+   How It Works Section
+   ====================== */
+.how-it-works {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px 30px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #2a7de1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.step p {
+    color: #666;
+}
+
+/* ======================
+   Testimonials Section
+   ====================== */
+.testimonials {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+    .testimonial::before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 4rem;
+        color: rgba(42, 125, 225, 0.1);
+        font-family: serif;
+        line-height: 1;
+    }
+
+    .testimonial p {
+        font-style: italic;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        color: #555;
+        position: relative;
+    }
+
+.testimonial-author {
+    font-weight: 600;
+    color: #333;
+}
+
+/* ======================
+   Doctors Page Styles
+   ====================== */
+.doctors {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.specialty-section {
+    margin-bottom: 60px;
+}
+
+    .specialty-section h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2a7de1;
+    }
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.doctor-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+    .doctor-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+.doctor-image {
+    flex: 0 0 120px;
+}
+
+    .doctor-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.doctor-info {
+    flex: 1;
+    padding: 20px;
+}
+
+    .doctor-info h4 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+.doctor-specialty {
+    color: #2a7de1;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.doctor-description {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ======================
+   Services Detail Page
+   ====================== */
 .services-detail {
-  padding: 60px 0;
-  background-color: white;
+    padding: 60px 0;
+    background-color: white;
 }
 
 .services-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
-  font-size: 1.1rem;
-  color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 .service-detail-item {
-  display: flex;
-  margin-bottom: 50px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .service-icon {
-  flex: 0 0 150px;
-  background-color: #2a7de1;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex: 0 0 150px;
+    background-color: #2a7de1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.service-icon i {
-  font-size: 4rem;
-}
+    .service-icon i {
+        font-size: 4rem;
+    }
 
 .service-content {
-  flex: 1;
-  padding: 30px;
+    flex: 1;
+    padding: 30px;
 }
 
-.service-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #333;
-}
+    .service-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
 
-.service-content p {
-  margin-bottom: 20px;
-  color: #555;
-}
+    .service-content p {
+        margin-bottom: 20px;
+        color: #555;
+    }
 
-.service-content ul {
-  margin-bottom: 25px;
-  padding-left: 20px;
-}
+    .service-content ul {
+        margin-bottom: 25px;
+        padding-left: 20px;
+    }
 
-.service-content ul li {
-  margin-bottom: 10px;
-  color: #555;
-  list-style-type: disc;
-}
+        .service-content ul li {
+            margin-bottom: 10px;
+            color: #555;
+            list-style-type: disc;
+        }
 
+/* Insurance Section */
 .insurance {
-  padding: 60px 0;
-  background-color: #f0f7ff;
+    padding: 60px 0;
+    background-color: #f0f7ff;
 }
 
 .insurance-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
 }
 
 .insurance-logo {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  width: 150px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.insurance-logo img {
-  max-width: 100%;
-  max-height: 100%;
+    .insurance-logo img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+/* ======================
+   Reservation Page
+   ====================== */
+.reservation-form-section {
+    padding: 60px 0;
+    background-color: white;
 }
 
-.insurance p {
-  text-align: center;
-  color: #555;
+.reservation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-/* Contact Page Styles */
+.form-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+.reservation-info {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f0f7ff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2a7de1;
+            box-shadow: 0 0 0 2px rgba(42, 125, 225, 0.2);
+        }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.patient-info {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+    .patient-info legend {
+        padding: 0 10px;
+        font-weight: 600;
+        color: #333;
+    }
+
+.info-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-icon-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .info-icon-item i {
+        color: #2a7de1;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+
+/* ======================
+   Contact Page Styles
+   ====================== */
 .contact-section {
-  padding: 60px 0;
-  background-color: white;
+    padding: 60px 0;
+    background-color: white;
 }
 
-.contact-info-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
 .contact-info {
-  flex: 1;
-  min-width: 300px;
-}
-
-.contact-form {
-  flex: 1;
-  min-width: 300px;
-}
-
-.contact-info h2,
-.contact-form h2 {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #333;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .info-item {
-  display: flex;
-  margin-bottom: 30px;
+    display: flex;
+    margin-bottom: 25px;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
+
+    .info-item:hover {
+        background-color: rgba(42, 125, 225, 0.05);
+    }
 
 .info-icon {
-  flex: 0 0 50px;
-  height: 50px;
-  background-color: #2a7de1;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-}
-
-.info-icon i {
-  font-size: 1.5rem;
+    flex: 0 0 50px;
+    height: 50px;
+    background-color: #2a7de1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.2rem;
 }
 
 .info-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
 }
 
-.info-content p {
-  color: #555;
-  margin-bottom: 5px;
+.info-content p,
+.info-content address {
+    color: #555;
+    font-style: normal;
+    line-height: 1.6;
 }
+
+.info-content a {
+    color: #2a7de1;
+    transition: color 0.3s ease;
+}
+
+    .info-content a:hover {
+        color: #1c5db0;
+        text-decoration: underline;
+    }
 
 .social-media {
-  margin-top: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
 }
 
-.social-media h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #333;
-}
+    .social-media h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
 
 .social-icons {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 12px;
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #2a7de1;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    background-color: #2a7de1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.social-icon:hover {
-  background-color: #1c5db0;
+    .social-icon:hover {
+        background-color: #1c5db0;
+        transform: translateY(-3px);
+    }
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
+    .contact-form h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        color: #333;
+    }
 
 .map-section {
-  padding: 60px 0;
-  background-color: #f9f9f9;
+    padding: 60px 0;
+    background-color: #f9f9f9;
 }
 
 .map-container {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .hero .container {
-    flex-direction: column;
-  }
-
-  .hero-content {
-    padding-right: 0;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .steps {
-    flex-direction: column;
-  }
-
-  .service-detail-item {
-    flex-direction: column;
-  }
-
-  .service-icon {
-    flex: 0 0 100px;
+#map {
     width: 100%;
-  }
+    height: 100%;
+}
+
+.map-fallback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+    .map-controls button {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+        .map-controls button:hover {
+            background-color: #2a7de1;
+            color: white;
+        }
+
+.transportation-info {
+    text-align: center;
+}
+
+    .transportation-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+.transportation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.transportation-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+    .transportation-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .transportation-item i {
+        font-size: 2rem;
+        color: #2a7de1;
+        margin-bottom: 15px;
+    }
+
+    .transportation-item p {
+        color: #555;
+        font-weight: 500;
+    }
+
+/* ======================
+   Chatbot Styles
+   ====================== */
+.chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #2a7de1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+    .chatbot-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .chatbot-icon i {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+.chatbot-box {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-header {
+    background-color: #2a7de1;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .chatbot-header h3 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .chatbot-header button {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+
+        .chatbot-header button:hover {
+            transform: rotate(90deg);
+        }
+
+.chatbot-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message.user {
+    background-color: #e6f2ff;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.message.bot {
+    background-color: #f1f1f1;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+.message.typing {
+    background-color: transparent;
+    font-style: italic;
+    color: #999;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background-color: white;
+}
+
+    .chatbot-input input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+        .chatbot-input input:focus {
+            border-color: #2a7de1;
+            box-shadow: 0 0 0 2px rgba(42, 125, 225, 0.2);
+        }
+
+    .chatbot-input button {
+        background-color: #2a7de1;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .chatbot-input button:hover {
+            background-color: #1c5db0;
+            transform: rotate(15deg);
+        }
+
+/* ======================
+   Footer Styles
+   ====================== */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+    .footer-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .footer-section p {
+        margin-bottom: 10px;
+        color: #ccc;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+        .footer-section ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+            .footer-section ul li a:hover {
+                color: #2a7de1;
+            }
+
+    .footer-section i {
+        margin-right: 10px;
+        color: #2a7de1;
+    }
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+    .footer-bottom p {
+        color: #ccc;
+    }
+
+/* ======================
+   Accessibility
+   ====================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2a7de1;
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+    .skip-link:focus {
+        top: 0;
+    }
+
+/* ======================
+   Responsive Styles
+   ====================== */
+@media (max-width: 1200px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .service-detail-item {
+        flex-direction: column;
+    }
+
+    .service-icon {
+        width: 100%;
+        padding: 30px 0;
+    }
 }
 
 @media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-  }
+    header .container {
+        flex-direction: column;
+    }
 
-  .logo {
-    margin-bottom: 15px;
-  }
+    .logo {
+        margin-bottom: 15px;
+    }
 
-  nav ul {
-    margin-bottom: 15px;
-  }
+    nav ul {
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .service-card {
-    min-width: 100%;
-  }
+        nav ul li {
+            margin: 5px 10px;
+        }
 
-  .doctors-grid {
-    grid-template-columns: 1fr;
-  }
+    .language-selector {
+        margin-top: 10px;
+    }
 
-  .doctor-card {
-    max-width: 100%;
-  }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .contact-info-container {
-    flex-direction: column;
-  }
+    .map-container {
+        height: 300px;
+    }
+
+    .transportation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chatbot-box {
+        width: 300px;
+    }
 }
 
 @media (max-width: 576px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+    .section-title {
+        font-size: 1.8rem;
+    }
 
-  nav ul li {
-    margin: 5px 0;
-  }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 
-  .chatbot-box {
-    width: 300px;
-  }
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    .chatbot-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .chatbot-box {
+        width: 280px;
+    }
 }
