@@ -1,75 +1,83 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Placeholder for any additional JavaScript functionality
+    // Enhanced smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
 
-  // Example: Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault()
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Calculate offset based on header height
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
-      const targetId = this.getAttribute("href")
-      if (targetId === "#") return
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 
-      const targetElement = document.querySelector(targetId)
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-      }
-    })
-  })
+    // Update copyright year
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll(".footer-bottom p").forEach((element) => {
+        element.innerHTML = element.innerHTML.replace("2025", currentYear);
+    });
 
-  // Example: Set current year in footer copyright
-  const currentYear = new Date().getFullYear()
-  const copyrightElements = document.querySelectorAll(".footer-bottom p")
+    // Enhanced contact form handling
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
 
-  copyrightElements.forEach((element) => {
-    element.innerHTML = element.innerHTML.replace("2025", currentYear)
-  })
+            // Get form data
+            const formData = new FormData(contactForm);
+            const contactData = Object.fromEntries(formData.entries());
 
-  // Handle contact form submission
-  const contactForm = document.getElementById("contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
+            try {
+                // In a real app, you would send to a server or Supabase
+                console.log("Contact form data:", contactData);
 
-      // Get form data
-      const formData = new FormData(contactForm)
-      const contactData = {}
+                // Show success message
+                const successMessage = document.documentElement.lang === "sq"
+                    ? "Mesazhi juaj u dërgua me sukses! Do t'ju kontaktojmë së shpejti."
+                    : "Your message has been sent successfully! We will contact you soon.";
 
-      for (const [key, value] of formData.entries()) {
-        contactData[key] = value
-      }
-
-      // In a real application, you would send this data to a server
-      console.log("Contact form data:", contactData)
-
-      // Show confirmation message
-      alert(
-        document.documentElement.lang === "sq"
-          ? "Mesazhi juaj u dërgua me sukses! Do t'ju kontaktojmë së shpejti."
-          : "Your message has been sent successfully! We will contact you soon.",
-      )
-
-      // Reset form
-      contactForm.reset()
-    })
-  }
-
-  // Handle service selection in URL parameters for reservation page
-  if (window.location.pathname.includes("reservation.html")) {
-    const urlParams = new URLSearchParams(window.location.search)
-    const serviceParam = urlParams.get("service")
-
-    if (serviceParam) {
-      const serviceSelect = document.getElementById("service")
-      if (serviceSelect) {
-        serviceSelect.value = serviceParam
-
-        // Trigger the change event to update doctors
-        const event = new Event("change")
-        serviceSelect.dispatchEvent(event)
-      }
+                alert(successMessage);
+                contactForm.reset();
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                const errorMessage = document.documentElement.lang === "sq"
+                    ? "Ka ndodhur një gabim. Ju lutemi provoni përsëri më vonë."
+                    : "An error occurred. Please try again later.";
+                alert(errorMessage);
+            }
+        });
     }
-  }
-})
+
+    // Enhanced service parameter handling for reservation page
+    if (window.location.pathname.includes("reservation.html")) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceParam = urlParams.get("service");
+
+        if (serviceParam) {
+            const serviceSelect = document.getElementById("service");
+            if (serviceSelect && serviceSelect.querySelector(`option[value="${serviceParam}"]`)) {
+                serviceSelect.value = serviceParam;
+
+                // Dispatch change event to trigger doctor list update
+                serviceSelect.dispatchEvent(new Event("change"));
+
+                // Scroll to form
+                setTimeout(() => {
+                    document.getElementById("appointment-form").scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 300);
+            }
+        }
+    }
+});
