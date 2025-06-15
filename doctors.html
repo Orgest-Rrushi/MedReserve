@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mjekët - Klinika Mjekësore</title>
+    <meta name="description" content="MedReserve - Mjekët tanë specialistë" data-translate="meta-doctors-description">
+    <title data-translate="doctors-page-title">Mjekët - Klinika Mjekësore</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Preload important resources -->
+    <link rel="preload" href="./img/doctor-male.jpg" as="image">
+    <link rel="preload" href="./img/doctor-female.jpg" as="image">
 </head>
 <body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link" data-translate="skip-link">Kaloni te përmbajtja</a>
+
     <header>
         <div class="container">
             <div class="logo">
                 <h1>MedReserve</h1>
             </div>
-            <nav>
+
+            <!-- Main Navigation -->
+            <nav aria-label="Primary navigation">
                 <ul>
                     <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
                     <li><a href="doctors.html" class="active" data-translate="doctors">Mjekët</a></li>
@@ -22,154 +37,206 @@
                     <li><a href="contact.html" data-translate="contact">Kontakti</a></li>
                 </ul>
             </nav>
-            <div class="language-selector">
-                <button id="lang-sq" class="active">SQ</button>
-                <button id="lang-en">EN</button>
+
+            <!-- Language Switcher -->
+            <div class="language-selector" aria-label="Language selector">
+                <button id="lang-sq" class="active" aria-label="Shqip">SQ</button>
+                <button id="lang-en" aria-label="English">EN</button>
             </div>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 data-translate="our-doctors">Mjekët Tanë</h1>
-        </div>
-    </section>
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-header-heading">
+            <div class="container">
+                <h1 id="page-header-heading" data-translate="our-doctors">Mjekët Tanë</h1>
+            </div>
+        </section>
 
-    <section class="doctors">
-        <div class="container">
-            <h2 class="section-title" data-translate="meet-our-specialists">Njihuni me Specialistët Tanë</h2>
-            
-            <div class="specialty-section">
-                <h3 data-translate="cardiology">Kardiologji</h3>
-                <div class="doctors-grid">
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-male.jpg" alt="Dr. Artan Gjoni">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Artan Gjoni</h4>
-                            <p class="doctor-specialty" data-translate="cardiologist">Kardiolog</p>
-                            <p class="doctor-description" data-translate="artan-desc">Dr. Gjoni ka mbi 15 vjet përvojë në diagnostikimin dhe trajtimin e sëmundjeve të zemrës. Ai është i specializuar në kardiologji intervenuese.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
+        <!-- Doctors Section -->
+        <section class="doctors" aria-labelledby="doctors-heading">
+            <div class="container">
+                <h2 id="doctors-heading" class="section-title" data-translate="meet-our-specialists">Njihuni me Specialistët Tanë</h2>
+
+                <!-- Cardiology Section -->
+                <div class="specialty-section" id="cardiology">
+                    <h3 data-translate="cardiology">Kardiologji</h3>
+                    <div class="doctors-grid">
+                        <!-- Doctor 1 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-artan">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-male.jpg" alt="Portret i Dr. Artan Gjonit" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-artan">Dr. Artan Gjoni</h4>
+                                <p class="doctor-specialty" data-translate="cardiologist">Kardiolog</p>
+                                <p class="doctor-description" data-translate="artan-desc">
+                                    Dr. Gjoni ka mbi 15 vjet përvojë në diagnostikimin dhe trajtimin e sëmundjeve të zemrës.
+                                    Ai është i specializuar në kardiologji intervenuese.
+                                </p>
+                                <a href="reservation.html?service=cardiology&doctor=c1" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
+
+                        <!-- Doctor 2 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-elira">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-female.jpg" alt="Portret i Dr. Elira Myftari" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-elira">Dr. Elira Myftari</h4>
+                                <p class="doctor-specialty" data-translate="cardiologist">Kardiologe</p>
+                                <p class="doctor-description" data-translate="elira-desc">
+                                    Dr. Myftari është e specializuar në kardiologji pediatrike dhe ka një përvojë të gjerë
+                                    në trajtimin e problemeve kardiake tek fëmijët dhe të rriturit.
+                                </p>
+                                <a href="reservation.html?service=cardiology&doctor=c2" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
                     </div>
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-female.jpg" alt="Dr. Elira Myftari">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Elira Myftari</h4>
-                            <p class="doctor-specialty" data-translate="cardiologist">Kardiologe</p>
-                            <p class="doctor-description" data-translate="elira-desc">Dr. Myftari është e specializuar në kardiologji pediatrike dhe ka një përvojë të gjerë në trajtimin e problemeve kardiake tek fëmijët dhe të rriturit.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
+                </div>
+
+                <!-- Neurology Section -->
+                <div class="specialty-section" id="neurology">
+                    <h3 data-translate="neurology">Neurologji</h3>
+                    <div class="doctors-grid">
+                        <!-- Doctor 3 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-besnik">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-male.jpg" alt="Portret i Dr. Besnik Hoxha" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-besnik">Dr. Besnik Hoxha</h4>
+                                <p class="doctor-specialty" data-translate="neurologist">Neurolog</p>
+                                <p class="doctor-description" data-translate="besnik-desc">
+                                    Dr. Hoxha është i specializuar në trajtimin e çrregullimeve neurologjike dhe ka një përvojë
+                                    të gjerë në diagnostikimin dhe trajtimin e sëmundjeve të sistemit nervor.
+                                </p>
+                                <a href="reservation.html?service=neurology&doctor=n1" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
+
+                        <!-- Doctor 4 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-mirela">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-female.jpg" alt="Portret i Dr. Mirela Koçi" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-mirela">Dr. Mirela Koçi</h4>
+                                <p class="doctor-specialty" data-translate="neurologist">Neurologe</p>
+                                <p class="doctor-description" data-translate="mirela-desc">
+                                    Dr. Koçi ka një përvojë të gjerë në trajtimin e migrenës, epilepsisë dhe çrregullimeve
+                                    të tjera neurologjike. Ajo është e specializuar në neurologji klinike.
+                                </p>
+                                <a href="reservation.html?service=neurology&doctor=n2" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Dentistry Section -->
+                <div class="specialty-section" id="dentistry">
+                    <h3 data-translate="dentistry">Stomatologji</h3>
+                    <div class="doctors-grid">
+                        <!-- Doctor 5 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-genta">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-female.jpg" alt="Portret i Dr. Genta Basha" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-genta">Dr. Genta Basha</h4>
+                                <p class="doctor-specialty" data-translate="dentist">Stomatologe</p>
+                                <p class="doctor-description" data-translate="genta-desc">
+                                    Dr. Basha është e specializuar në stomatologji estetike dhe ka një përvojë të gjerë
+                                    në trajtimin e problemeve dentare për të gjitha moshat.
+                                </p>
+                                <a href="reservation.html?service=dentistry&doctor=d1" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
+
+                        <!-- Doctor 6 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-dritan">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-male.jpg" alt="Portret i Dr. Dritan Leka" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-dritan">Dr. Dritan Leka</h4>
+                                <p class="doctor-specialty" data-translate="dentist">Stomatolog</p>
+                                <p class="doctor-description" data-translate="dritan-desc">
+                                    Dr. Leka është i specializuar në kirurgji orale dhe implantologji. Ai ka një përvojë
+                                    të gjerë në trajtimin e rasteve komplekse dentare.
+                                </p>
+                                <a href="reservation.html?service=dentistry&doctor=d2" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Ophthalmology Section -->
+                <div class="specialty-section" id="ophthalmology">
+                    <h3 data-translate="ophthalmology">Oftalmologji</h3>
+                    <div class="doctors-grid">
+                        <!-- Doctor 7 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-lindita">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-female.jpg" alt="Portret i Dr. Lindita Shala" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-lindita">Dr. Lindita Shala</h4>
+                                <p class="doctor-specialty" data-translate="ophthalmologist">Oftalmologe</p>
+                                <p class="doctor-description" data-translate="lindita-desc">
+                                    Dr. Shala është e specializuar në trajtimin e sëmundjeve të syrit dhe ka një përvojë
+                                    të gjerë në diagnostikimin dhe trajtimin e problemeve të shikimit.
+                                </p>
+                                <a href="reservation.html?service=ophthalmology&doctor=o1" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
+
+                        <!-- Doctor 8 -->
+                        <article class="doctor-card" tabindex="0" aria-labelledby="doctor-ermal">
+                            <div class="doctor-image">
+                                <img src="./img/doctor-male.jpg" alt="Portret i Dr. Ermal Duka" loading="lazy">
+                            </div>
+                            <div class="doctor-info">
+                                <h4 id="doctor-ermal">Dr. Ermal Duka</h4>
+                                <p class="doctor-specialty" data-translate="ophthalmologist">Oftalmolog</p>
+                                <p class="doctor-description" data-translate="ermal-desc">
+                                    Dr. Duka është i specializuar në kirurgji të syrit dhe ka një përvojë të gjerë
+                                    në trajtimin e kataraktit dhe glaukomës.
+                                </p>
+                                <a href="reservation.html?service=ophthalmology&doctor=o2" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="specialty-section">
-                <h3 data-translate="neurology">Neurologji</h3>
-                <div class="doctors-grid">
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-male.jpg" alt="Dr. Besnik Hoxha">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Besnik Hoxha</h4>
-                            <p class="doctor-specialty" data-translate="neurologist">Neurolog</p>
-                            <p class="doctor-description" data-translate="besnik-desc">Dr. Hoxha është i specializuar në trajtimin e çrregullimeve neurologjike dhe ka një përvojë të gjerë në diagnostikimin dhe trajtimin e sëmundjeve të sistemit nervor.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
-                    </div>
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-female.jpg" alt="Dr. Mirela Koçi">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Mirela Koçi</h4>
-                            <p class="doctor-specialty" data-translate="neurologist">Neurologe</p>
-                            <p class="doctor-description" data-translate="mirela-desc">Dr. Koçi ka një përvojë të gjerë në trajtimin e migrenës, epilepsisë dhe çrregullimeve të tjera neurologjike. Ajo është e specializuar në neurologji klinike.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="specialty-section">
-                <h3 data-translate="dentistry">Stomatologji</h3>
-                <div class="doctors-grid">
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-female.jpg" alt="Dr. Genta Basha">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Genta Basha</h4>
-                            <p class="doctor-specialty" data-translate="dentist">Stomatologe</p>
-                            <p class="doctor-description" data-translate="genta-desc">Dr. Basha është e specializuar në stomatologji estetike dhe ka një përvojë të gjerë në trajtimin e problemeve dentare për të gjitha moshat.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
-                    </div>
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-male.jpg" alt="Dr. Dritan Leka">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Dritan Leka</h4>
-                            <p class="doctor-specialty" data-translate="dentist">Stomatolog</p>
-                            <p class="doctor-description" data-translate="dritan-desc">Dr. Leka është i specializuar në kirurgji orale dhe implantologji. Ai ka një përvojë të gjerë në trajtimin e rasteve komplekse dentare.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="specialty-section">
-                <h3 data-translate="ophthalmology">Oftalmologji</h3>
-                <div class="doctors-grid">
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-female.jpg" alt="Dr. Lindita Shala">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Lindita Shala</h4>
-                            <p class="doctor-specialty" data-translate="ophthalmologist">Oftalmologe</p>
-                            <p class="doctor-description" data-translate="lindita-desc">Dr. Shala është e specializuar në trajtimin e sëmundjeve të syrit dhe ka një përvojë të gjerë në diagnostikimin dhe trajtimin e problemeve të shikimit.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
-                    </div>
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="img/doctor-male.jpg" alt="Dr. Ermal Duka">
-                        </div>
-                        <div class="doctor-info">
-                            <h4>Dr. Ermal Duka</h4>
-                            <p class="doctor-specialty" data-translate="ophthalmologist">Oftalmolog</p>
-                            <p class="doctor-description" data-translate="ermal-desc">Dr. Duka është i specializuar në kirurgji të syrit dhe ka një përvojë të gjerë në trajtimin e kataraktit dhe glaukomës.</p>
-                            <a href="reservation.html" class="btn btn-sm" data-translate="book-appointment">Rezervo Takim</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Chatbot Widget -->
     <div class="chatbot-container">
-        <div class="chatbot-icon" id="chatbot-toggle">
-            <i class="fas fa-comments"></i>
+        <div class="chatbot-icon" id="chatbot-toggle" aria-label="Open chat" role="button" tabindex="0">
+            <i class="fas fa-comments" aria-hidden="true"></i>
         </div>
-        <div class="chatbot-box" id="chatbot-box">
+        <div class="chatbot-box" id="chatbot-box" aria-modal="true" role="dialog" aria-labelledby="chatbot-heading" hidden>
             <div class="chatbot-header">
-                <h3 data-translate="chat-with-us">Bisedo me Ne</h3>
-                <button id="close-chatbot"><i class="fas fa-times"></i></button>
+                <h3 id="chatbot-heading" data-translate="chat-with-us">Bisedo me Ne</h3>
+                <button id="close-chatbot" aria-label="Close chat">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
             </div>
-            <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chatbot-messages" id="chatbot-messages" role="log">
                 <div class="message bot">
                     <p data-translate="chatbot-welcome">Përshëndetje! Si mund t'ju ndihmoj sot me rezervimin tuaj?</p>
                 </div>
             </div>
             <div class="chatbot-input">
-                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj...">
-                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                <label for="user-input" class="sr-only" data-translate="type-message">Shkruani mesazhin tuaj</label>
+                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj..." aria-labelledby="chatbot-heading">
+                <button id="send-message" aria-label="Send message">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -177,10 +244,13 @@
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- About Section -->
                 <div class="footer-section">
                     <h3>MedReserve</h3>
                     <p data-translate="footer-desc">Platforma juaj e besueshme për rezervime mjekësore online.</p>
                 </div>
+
+                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3 data-translate="quick-links">Lidhje të Shpejta</h3>
                     <ul>
@@ -190,46 +260,48 @@
                         <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact Info -->
                 <div class="footer-section">
                     <h3 data-translate="contact-us">Na Kontaktoni</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
-                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
-                    <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> info@medreserve.al</p>
+                    </address>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2025 MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
+                <p>&copy; <span id="current-year">2025</span> MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="./js/translations.js"></script>
     <script src="./js/language-switcher.js"></script>
     <script src="./js/chatbot.js"></script>
     <script src="./js/main.js"></script>
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    <!-- Firebase -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
-    authDomain: "medreserve-c4727.firebaseapp.com",
-    projectId: "medreserve-c4727",
-    storageBucket: "medreserve-c4727.firebasestorage.app",
-    messagingSenderId: "471960012100",
-    appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
-    measurementId: "G-63WKXV10R1"
-  };
+        const firebaseConfig = {
+            apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
+            authDomain: "medreserve-c4727.firebaseapp.com",
+            projectId: "medreserve-c4727",
+            storageBucket: "medreserve-c4727.firebasestorage.app",
+            messagingSenderId: "471960012100",
+            appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
+            measurementId: "G-63WKXV10R1"
+        };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
