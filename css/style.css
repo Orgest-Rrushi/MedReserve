@@ -893,4 +893,9 @@ footer {
   .chatbot-box {
     width: 300px;
   }
+
+  .message.bot#typing-indicator {
+    font-style: italic;
+    color: gray;
+  }
 }
