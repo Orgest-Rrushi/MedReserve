@@ -3,155 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedReserve - Platforma për rezervime mjekësore online në Shqipëri">
+    <meta name="keywords" content="mjekë, rezervime, shëndetësi, klinikë, Tiranë">
+    <meta name="author" content="MedReserve Team">
     <title>Klinika Mjekësore - Rezervimet Online</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <a href="#main-content" class="skip-link" data-translate="skip-to-content">Kalo te përmbajtja</a>
+
+    <header role="banner">
         <div class="container">
             <div class="logo">
                 <h1>MedReserve</h1>
             </div>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="index.html" class="active" data-translate="home">Kryefaqja</a></li>
+                    <li><a href="index.html" class="active" data-translate="home" aria-current="page">Kryefaqja</a></li>
                     <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
                     <li><a href="services.html" data-translate="services">Shërbimet</a></li>
                     <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
                     <li><a href="contact.html" data-translate="contact">Kontakti</a></li>
                 </ul>
             </nav>
-            <div class="language-selector">
-                <button id="lang-sq" class="active">SQ</button>
-                <button id="lang-en">EN</button>
+            <div class="language-selector" aria-label="Language selector">
+                <button id="lang-sq" class="active" aria-label="Shqip">SQ</button>
+                <button id="lang-en" aria-label="English">EN</button>
             </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 data-translate="hero-title">Kujdesi Shëndetësor i Personalizuar</h2>
-                <p data-translate="hero-text">Rezervoni takimin tuaj mjekësor online në mënyrë të thjeshtë dhe të shpejtë.</p>
-                <a href="reservation.html" class="btn" data-translate="book-now">Rezervo Tani</a>
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 id="hero-heading" data-translate="hero-title">Kujdesi Shëndetësor i Personalizuar</h2>
+                    <p data-translate="hero-text">Rezervoni takimin tuaj mjekësor online në mënyrë të thjeshtë dhe të shpejtë.</p>
+                    <a href="reservation.html" class="btn" data-translate="book-now">Rezervo Tani</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/doctor.jpg" alt="Mjek në klinikën MedReserve" loading="lazy" id="hero-img">
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="img/doctor.jpg" alt="Doctor" id="hero-img">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title" data-translate="our-services">Shërbimet Tona</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3 data-translate="cardiology">Kardiologji</h3>
-                    <p data-translate="cardiology-desc">Diagnostikimi dhe trajtimi i sëmundjeve të zemrës nga specialistët tanë.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-brain"></i>
-                    <h3 data-translate="neurology">Neurologji</h3>
-                    <p data-translate="neurology-desc">Kujdes i specializuar për çështjet e sistemit nervor.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tooth"></i>
-                    <h3 data-translate="dentistry">Stomatologji</h3>
-                    <p data-translate="dentistry-desc">Shërbime dentare të plota për të gjithë familjen.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-eye"></i>
-                    <h3 data-translate="ophthalmology">Oftalmologji</h3>
-                    <p data-translate="ophthalmology-desc">Kujdes i specializuar për shëndetin e syve tuaj.</p>
+        <section class="services" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading" class="section-title" data-translate="our-services">Shërbimet Tona</h2>
+                <div class="services-grid">
+                    <article class="service-card" aria-labelledby="cardiology-heading">
+                        <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                        <h3 id="cardiology-heading" data-translate="cardiology">Kardiologji</h3>
+                        <p data-translate="cardiology-desc">Diagnostikimi dhe trajtimi i sëmundjeve të zemrës nga specialistët tanë.</p>
+                    </article>
+                    <article class="service-card" aria-labelledby="neurology-heading">
+                        <i class="fas fa-brain" aria-hidden="true"></i>
+                        <h3 id="neurology-heading" data-translate="neurology">Neurologji</h3>
+                        <p data-translate="neurology-desc">Kujdes i specializuar për çështjet e sistemit nervor.</p>
+                    </article>
+                    <article class="service-card" aria-labelledby="dentistry-heading">
+                        <i class="fas fa-tooth" aria-hidden="true"></i>
+                        <h3 id="dentistry-heading" data-translate="dentistry">Stomatologji</h3>
+                        <p data-translate="dentistry-desc">Shërbime dentare të plota për të gjithë familjen.</p>
+                    </article>
+                    <article class="service-card" aria-labelledby="ophthalmology-heading">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        <h3 id="ophthalmology-heading" data-translate="ophthalmology">Oftalmologji</h3>
+                        <p data-translate="ophthalmology-desc">Kujdes i specializuar për shëndetin e syve tuaj.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title" data-translate="how-it-works">Si Funksionon</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 data-translate="step1-title">Zgjidhni Specialistin</h3>
-                    <p data-translate="step1-desc">Shfletoni listën e mjekëve tanë dhe zgjidhni specialistin e duhur për nevojat tuaja.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 data-translate="step2-title">Zgjidhni Datën dhe Orën</h3>
-                    <p data-translate="step2-desc">Zgjidhni një datë dhe orë që ju përshtatet nga oraret e disponueshme.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 data-translate="step3-title">Konfirmoni Rezervimin</h3>
-                    <p data-translate="step3-desc">Plotësoni të dhënat tuaja dhe konfirmoni rezervimin tuaj.</p>
+        <section class="how-it-works" aria-labelledby="how-it-works-heading">
+            <div class="container">
+                <h2 id="how-it-works-heading" class="section-title" data-translate="how-it-works">Si Funksionon</h2>
+                <div class="steps">
+                    <article class="step" aria-labelledby="step1-heading">
+                        <div class="step-number">1</div>
+                        <h3 id="step1-heading" data-translate="step1-title">Zgjidhni Specialistin</h3>
+                        <p data-translate="step1-desc">Shfletoni listën e mjekëve tanë dhe zgjidhni specialistin e duhur për nevojat tuaja.</p>
+                    </article>
+                    <article class="step" aria-labelledby="step2-heading">
+                        <div class="step-number">2</div>
+                        <h3 id="step2-heading" data-translate="step2-title">Zgjidhni Datën dhe Orën</h3>
+                        <p data-translate="step2-desc">Zgjidhni një datë dhe orë që ju përshtatet nga oraret e disponueshme.</p>
+                    </article>
+                    <article class="step" aria-labelledby="step3-heading">
+                        <div class="step-number">3</div>
+                        <h3 id="step3-heading" data-translate="step3-title">Konfirmoni Rezervimin</h3>
+                        <p data-translate="step3-desc">Plotësoni të dhënat tuaja dhe konfirmoni rezervimin tuaj.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title" data-translate="testimonials">Çfarë Thonë Pacientët Tanë</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p data-translate="testimonial1-text">"Shërbim i shkëlqyer dhe staf shumë profesional. Procesi i rezervimit ishte shumë i thjeshtë."</p>
-                    <div class="testimonial-author" data-translate="testimonial1-author">- Arben Malaj</div>
-                </div>
-                <div class="testimonial">
-                    <p data-translate="testimonial2-text">"Mjekët janë shumë të kujdesshëm dhe të vëmendshëm. Rekomandoj këtë klinikë për të gjithë."</p>
-                    <div class="testimonial-author" data-translate="testimonial2-author">- Elona Hoxha</div>
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <h2 id="testimonials-heading" class="section-title" data-translate="testimonials">Çfarë Thonë Pacientët Tanë</h2>
+                <div class="testimonial-slider">
+                    <blockquote class="testimonial" aria-labelledby="testimonial1-author">
+                        <p id="testimonial1-text" data-translate="testimonial1-text">"Shërbim i shkëlqyer dhe staf shumë profesional. Procesi i rezervimit ishte shumë i thjeshtë."</p>
+                        <footer id="testimonial1-author" data-translate="testimonial1-author">- Arben Malaj</footer>
+                    </blockquote>
+                    <blockquote class="testimonial" aria-labelledby="testimonial2-author">
+                        <p id="testimonial2-text" data-translate="testimonial2-text">"Mjekët janë shumë të kujdesshëm dhe të vëmendshëm. Rekomandoj këtë klinikë për të gjithë."</p>
+                        <footer id="testimonial2-author" data-translate="testimonial2-author">- Elona Hoxha</footer>
+                    </blockquote>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div class="chatbot-container">
-        <div class="chatbot-icon" id="chatbot-toggle">
+        <button class="chatbot-icon" id="chatbot-toggle" aria-label="Open chat">
             <i class="fas fa-comments"></i>
-        </div>
-        <div class="chatbot-box" id="chatbot-box">
+        </button>
+        <div class="chatbot-box" id="chatbot-box" role="dialog" aria-labelledby="chatbot-heading">
             <div class="chatbot-header">
-                <h3 data-translate="chat-with-us">Bisedo me Ne</h3>
-                <button id="close-chatbot"><i class="fas fa-times"></i></button>
+                <h3 id="chatbot-heading" data-translate="chat-with-us">Bisedo me Ne</h3>
+                <button id="close-chatbot" aria-label="Close chat"><i class="fas fa-times"></i></button>
             </div>
-            <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chatbot-messages" id="chatbot-messages" aria-live="polite">
                 <div class="message bot">
                     <p data-translate="chatbot-welcome">Përshëndetje! Si mund t'ju ndihmoj sot me rezervimin tuaj?</p>
                 </div>
             </div>
             <div class="chatbot-input">
-                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj...">
-                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj..." aria-label="Type your message">
+                <button id="send-message" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MedReserve</h3>
+                <section class="footer-section" aria-labelledby="footer-about">
+                    <h3 id="footer-about">MedReserve</h3>
                     <p data-translate="footer-desc">Platforma juaj e besueshme për rezervime mjekësore online.</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-translate="quick-links">Lidhje të Shpejta</h3>
+                </section>
+                <section class="footer-section" aria-labelledby="footer-links">
+                    <h3 id="footer-links" data-translate="quick-links">Lidhje të Shpejta</h3>
                     <ul>
                         <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
                         <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
                         <li><a href="services.html" data-translate="services">Shërbimet</a></li>
                         <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-translate="contact-us">Na Kontaktoni</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
-                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
-                    <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
-                </div>
+                </section>
+                <section class="footer-section" aria-labelledby="footer-contact">
+                    <h3 id="footer-contact" data-translate="contact-us">Na Kontaktoni</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
+                        <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
+                    </address>
+                </section>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
@@ -164,28 +173,22 @@
     <script src="./js/chatbot.js"></script>
     <script src="./js/main.js"></script>
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-analytics.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
-    authDomain: "medreserve-c4727.firebaseapp.com",
-    projectId: "medreserve-c4727",
-    storageBucket: "medreserve-c4727.firebasestorage.app",
-    messagingSenderId: "471960012100",
-    appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
-    measurementId: "G-63WKXV10R1"
-  };
+        const firebaseConfig = {
+            apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
+            authDomain: "medreserve-c4727.firebaseapp.com",
+            projectId: "medreserve-c4727",
+            storageBucket: "medreserve-c4727.firebasestorage.app",
+            messagingSenderId: "471960012100",
+            appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
+            measurementId: "G-63WKXV10R1"
+        };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
