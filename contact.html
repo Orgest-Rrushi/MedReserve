@@ -3,188 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktoni me klinikën MedReserve për çdo pyetje ose rezervim të takimit mjekësor">
+    <meta name="keywords" content="kontakt, klinikë mjekësore, Tiranë, Shqipëri">
+    <meta name="author" content="MedReserve Team">
     <title>Kontakti - Klinika Mjekësore</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <a href="#main-content" class="skip-link" data-translate="skip-to-content">Kalo te përmbajtja</a>
+
+    <header role="banner">
         <div class="container">
             <div class="logo">
                 <h1>MedReserve</h1>
             </div>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
                     <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
                     <li><a href="services.html" data-translate="services">Shërbimet</a></li>
                     <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
-                    <li><a href="contact.html" class="active" data-translate="contact">Kontakti</a></li>
+                    <li><a href="contact.html" class="active" data-translate="contact" aria-current="page">Kontakti</a></li>
                 </ul>
             </nav>
-            <div class="language-selector">
-                <button id="lang-sq" class="active">SQ</button>
-                <button id="lang-en">EN</button>
+            <div class="language-selector" aria-label="Language selector">
+                <button id="lang-sq" class="active" aria-label="Shqip">SQ</button>
+                <button id="lang-en" aria-label="English">EN</button>
             </div>
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 data-translate="contact-us-page">Na Kontaktoni</h1>
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="page-header" aria-labelledby="page-header-heading">
+            <div class="container">
+                <h1 id="page-header-heading" data-translate="contact-us-page">Na Kontaktoni</h1>
+            </div>
+        </section>
 
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-info-container">
-                <div class="contact-info">
-                    <h2 data-translate="contact-info-title">Informacioni i Kontaktit</h2>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+        <section class="contact-section" aria-labelledby="contact-section-heading">
+            <div class="container">
+                <div class="contact-info-container">
+                    <article class="contact-info" aria-labelledby="contact-info-heading">
+                        <h2 id="contact-info-heading" data-translate="contact-info-title">Informacioni i Kontaktit</h2>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 data-translate="address-title">Adresa</h3>
+                                <address data-translate="address-full">Rruga e Durrësit, Nr. 123, Tiranë, Shqipëri</address>
+                            </div>
                         </div>
-                        <div class="info-content">
-                            <h3 data-translate="address-title">Adresa</h3>
-                            <p data-translate="address-full">Rruga e Durrësit, Nr. 123, Tiranë, Shqipëri</p>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 data-translate="phone-title">Telefoni</h3>
+                                <p><a href="tel:+355691234567">+355 69 123 4567</a></p>
+                                <p><a href="tel:+35542123456">+355 42 123 456</a></p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 data-translate="email-title">Email</h3>
+                                <p><a href="mailto:info@medreserve.al">info@medreserve.al</a></p>
+                                <p><a href="mailto:rezervime@medreserve.al">rezervime@medreserve.al</a></p>
+                            </div>
                         </div>
-                        <div class="info-content">
-                            <h3 data-translate="phone-title">Telefoni</h3>
-                            <p>+355 69 123 4567</p>
-                            <p>+355 42 123 456</p>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3 data-translate="hours-title">Orari i Punës</h3>
+                                <p data-translate="weekdays">E Hënë - E Premte: 08:00 - 18:00</p>
+                                <p data-translate="saturday">E Shtunë: 09:00 - 14:00</p>
+                                <p data-translate="sunday">E Diel: Mbyllur</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
+
+                        <div class="social-media" aria-labelledby="social-media-heading">
+                            <h3 id="social-media-heading" data-translate="follow-us">Na Ndiqni</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
                         </div>
-                        <div class="info-content">
-                            <h3 data-translate="email-title">Email</h3>
-                            <p>info@medreserve.al</p>
-                            <p>rezervime@medreserve.al</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3 data-translate="hours-title">Orari i Punës</h3>
-                            <p data-translate="weekdays">E Hënë - E Premte: 08:00 - 18:00</p>
-                            <p data-translate="saturday">E Shtunë: 09:00 - 14:00</p>
-                            <p data-translate="sunday">E Diel: Mbyllur</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-media">
-                        <h3 data-translate="follow-us">Na Ndiqni</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h2 data-translate="contact-form-title">Na Dërgoni një Mesazh</h2>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name" data-translate="your-name">Emri Juaj</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" data-translate="your-email">Email-i Juaj</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" data-translate="your-phone">Numri i Telefonit</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" data-translate="subject">Subjekti</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" data-translate="message">Mesazhi Juaj</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary" data-translate="send-message">Dërgo Mesazhin</button>
-                    </form>
+                    </article>
+
+                    <article class="contact-form" aria-labelledby="contact-form-heading">
+                        <h2 id="contact-form-heading" data-translate="contact-form-title">Na Dërgoni një Mesazh</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" data-translate="your-name">Emri Juaj</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-help">
+                                <span id="name-help" class="help-text" data-translate="name-help">Shkruani emrin tuaj të plotë</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" data-translate="your-email">Email-i Juaj</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-help">
+                                <span id="email-help" class="help-text" data-translate="email-help">Shkruani adresën tuaj të emailit</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-translate="your-phone">Numri i Telefonit</label>
+                                <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
+                                <span id="phone-help" class="help-text" data-translate="phone-help">Shkruani numrin tuaj të telefonit</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" data-translate="subject">Subjekti</label>
+                                <input type="text" id="subject" name="subject" required aria-describedby="subject-help">
+                                <span id="subject-help" class="help-text" data-translate="subject-help">Përshkruani shkurtimisht çështjen tuaj</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-translate="message">Mesazhi Juaj</label>
+                                <textarea id="message" name="message" rows="5" required aria-describedby="message-help"></textarea>
+                                <span id="message-help" class="help-text" data-translate="message-help">Shkruani mesazhin tuaj në detaje</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" data-translate="send-message">Dërgo Mesazhin</button>
+                        </form>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="map-section">
-        <div class="container">
-            <h2 class="section-title" data-translate="find-us">Na Gjeni</h2>
-            <div class="map-container">
-                <!-- Replace with actual Google Maps embed code -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0557239381287!2d19.8104199!3d41.3275459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310470fac5db%3A0x40c2a526a4b99c0a!2sTirana%2C%20Albania!5e0!3m2!1sen!2s!4v1620120000000!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section class="map-section" aria-labelledby="map-section-heading">
+            <div class="container">
+                <h2 id="map-section-heading" class="section-title" data-translate="find-us">Na Gjeni</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0557239381287!2d19.8104199!3d41.3275459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310470fac5db%3A0x40c2a526a4b99c0a!2sTirana%2C%20Albania!5e0!3m2!1sen!2s!4v1620120000000!5m2!1sen!2s"
+                            width="100%" height="450" style="border:0;"
+                            allowfullscreen="" loading="lazy"
+                            title="Harta e lokacionit të klinikës MedReserve"></iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <div class="chatbot-container">
-        <div class="chatbot-icon" id="chatbot-toggle">
+        <button class="chatbot-icon" id="chatbot-toggle" aria-label="Open chat">
             <i class="fas fa-comments"></i>
-        </div>
-        <div class="chatbot-box" id="chatbot-box">
+        </button>
+        <div class="chatbot-box" id="chatbot-box" role="dialog" aria-labelledby="chatbot-heading">
             <div class="chatbot-header">
-                <h3 data-translate="chat-with-us">Bisedo me Ne</h3>
-                <button id="close-chatbot"><i class="fas fa-times"></i></button>
+                <h3 id="chatbot-heading" data-translate="chat-with-us">Bisedo me Ne</h3>
+                <button id="close-chatbot" aria-label="Close chat"><i class="fas fa-times"></i></button>
             </div>
-            <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chatbot-messages" id="chatbot-messages" aria-live="polite">
                 <div class="message bot">
                     <p data-translate="chatbot-welcome">Përshëndetje! Si mund t'ju ndihmoj sot me rezervimin tuaj?</p>
                 </div>
             </div>
             <div class="chatbot-input">
-                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj...">
-                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                <input type="text" id="user-input" data-translate="type-message" placeholder="Shkruani mesazhin tuaj..." aria-label="Type your message">
+                <button id="send-message" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MedReserve</h3>
+                <section class="footer-section" aria-labelledby="footer-about">
+                    <h3 id="footer-about">MedReserve</h3>
                     <p data-translate="footer-desc">Platforma juaj e besueshme për rezervime mjekësore online.</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-translate="quick-links">Lidhje të Shpejta</h3>
+                </section>
+                <section class="footer-section" aria-labelledby="footer-links">
+                    <h3 id="footer-links" data-translate="quick-links">Lidhje të Shpejta</h3>
                     <ul>
                         <li><a href="index.html" data-translate="home">Kryefaqja</a></li>
                         <li><a href="doctors.html" data-translate="doctors">Mjekët</a></li>
                         <li><a href="services.html" data-translate="services">Shërbimet</a></li>
                         <li><a href="reservation.html" data-translate="reservation">Rezervimi</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-translate="contact-us">Na Kontaktoni</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
-                    <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
-                    <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
-                </div>
+                </section>
+                <section class="footer-section" aria-labelledby="footer-contact">
+                    <h3 id="footer-contact" data-translate="contact-us">Na Kontaktoni</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="address">Rruga e Durrësit, Tiranë, Shqipëri</span></p>
+                        <p><i class="fas fa-phone"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@medreserve.al</p>
+                    </address>
+                </section>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 MedReserve. <span data-translate="rights">Të gjitha të drejtat e rezervuara.</span></p>
@@ -197,28 +213,22 @@
     <script src="./js/chatbot.js"></script>
     <script src="./js/main.js"></script>
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-analytics.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
-    authDomain: "medreserve-c4727.firebaseapp.com",
-    projectId: "medreserve-c4727",
-    storageBucket: "medreserve-c4727.firebasestorage.app",
-    messagingSenderId: "471960012100",
-    appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
-    measurementId: "G-63WKXV10R1"
-  };
+        const firebaseConfig = {
+            apiKey: "AIzaSyCMEgIWsIKykWsFHXFGCM5fEl51_Jjd0Tw",
+            authDomain: "medreserve-c4727.firebaseapp.com",
+            projectId: "medreserve-c4727",
+            storageBucket: "medreserve-c4727.firebasestorage.app",
+            messagingSenderId: "471960012100",
+            appId: "1:471960012100:web:2ca0d9f0e9ba57b2800311",
+            measurementId: "G-63WKXV10R1"
+        };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
