@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="doctors-silhouettes">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/img/doctors-silhouettes.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
