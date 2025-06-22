@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedReserve - Rezervime të lehta dhe të shpejta për kujdes shëndetësor në Shqipëri. Zgjidh mjekun, cakto orarin dhe konfirmo me lehtësi.">
     <title>Klinika Mjekësore - Rezervimet Online</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -29,6 +30,8 @@
         </div>
     </header>
 
+    <main>
+
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -37,7 +40,7 @@
                 <a href="reservation.html" class="btn" data-translate="book-now">Rezervo Tani</a>
             </div>
             <div class="hero-image">
-                <img src="img/doctor.jpg" alt="Doctor" id="hero-img">
+                <img src="data:image/jpeg;base64,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" alt="Doctor" id="hero-img">
             </div>
         </div>
     </section>
@@ -108,7 +111,7 @@
             </div>
         </div>
     </section>
-
+   <section class="chatbot">
     <div class="chatbot-container">
         <div class="chatbot-icon" id="chatbot-toggle">
             <i class="fas fa-comments"></i>
@@ -129,7 +132,8 @@
             </div>
         </div>
     </div>
-
+   </section>
+    </main>
     <footer>
         <div class="container">
             <div class="footer-content">
