@@ -1,5 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Placeholder for any additional JavaScript functionality
+  const darkModeToggle = document.getElementById("darkmode-toggle");
+  const darkModeIcon = darkModeToggle.querySelector("i");
+
+  // Load saved dark mode preference
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "enabled") {
+    document.body.classList.add("dark-mode");
+    darkModeIcon.classList.replace("fa-moon", "fa-sun");
+    darkModeToggle.classList.add("sun-mode");
+  } else {
+    darkModeToggle.classList.remove("sun-mode");
+  }
+
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      darkModeIcon.classList.replace("fa-moon", "fa-sun");
+      darkModeToggle.classList.add("sun-mode");
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      darkModeIcon.classList.replace("fa-sun", "fa-moon");
+      darkModeToggle.classList.remove("sun-mode");
+    }
+  });
 
   // Example: Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

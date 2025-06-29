@@ -893,4 +893,94 @@ footer {
   .chatbot-box {
     width: 300px;
   }
+
+  .message.bot#typing-indicator {
+    font-style: italic;
+    color: gray;
+  }
 }
+
+html.dark-mode,
+body.dark-mode, 
+body.dark-mode .hero,
+body.dark-mode .chatbot-container {
+  background-color: #121212;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .hero, 
+body.dark-mode .hero h2 {
+  background-color: #333;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .hero p {
+  color: #998f8f !important;
+}
+
+body.dark-mode .services, 
+body.dark-mode .services h2,
+body.dark-mode .testimonials,
+body.dark-mode .testimonials h2 {
+  background-color: #444;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .how-it-works, 
+body.dark-mode .how-it-works h2 {
+  background-color: #333;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .chatbot-container {
+  background-color: transparent;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .chatbot-box {
+  background-color: #222;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .message.bot {
+  background-color: #333;
+  color: #e0e0e0 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .message.user {
+  background-color: #4a90e2;
+  color: #fff !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkmode-toggle {
+  width: 50px;               
+  height: 30px;
+  border: 1px solid #2a7de1;
+  border-radius: 6px;
+  background-color: white;   
+  color: #2a7de1;             
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkmode-toggle i {
+  pointer-events: none; 
+}
+
+#darkmode-toggle.sun-mode {
+  background-color: #2a7de1; 
+  color: white;             
+}
+

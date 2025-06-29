@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const userInput = document.getElementById("user-input")
   const sendButton = document.getElementById("send-message")
 
+  loadMessages()
+
   // Simple responses for the chatbot
   const botResponses = {
     sq: {
@@ -77,26 +79,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Scroll to the bottom of the messages
     messagesContainer.scrollTop = messagesContainer.scrollHeight
+
+    // Save messages to localStorage
+    saveMessages()
+  }
+
+  // Save messages array to localStorage
+  function saveMessages() {
+    const messages = []
+    const messageDivs = messagesContainer.querySelectorAll(".message")
+    messageDivs.forEach(div => {
+      messages.push({
+        text: div.textContent,
+        isUser: div.classList.contains("user"),
+      })
+    })
+    localStorage.setItem("chatMessages", JSON.stringify(messages))
+  }
+
+  // Load messages from localStorage
+  function loadMessages() {
+    const saved = localStorage.getItem("chatMessages")
+    if (!saved) return
+    const messages = JSON.parse(saved)
+    messages.forEach(({ text, isUser }) => {
+      addMessage(text, isUser)
+    })
+    // Scroll to bottom after loading
+    messagesContainer.scrollTop = messagesContainer.scrollHeight
+  }
+
+  // Keyword map
+  const keywords = {
+    greeting: ["përshëndetje", "pershendetje", "hello", "hi", "hey"],
+    reservation: ["rezervim", "reservation", "book", "appointment"],
+    doctors: ["mjek", "doctor", "specialist"],
+    services: ["shërbim", "sherbim", "service", "treatment"],
+    contact: ["kontakt", "contact", "email", "phone"],
   }
 
   // Function to process user input and generate a response
   function processUserInput(input) {
-    input = input.toLowerCase()
-
+    input = normalizeInput(input)
+    console.log(input)
     // Simple keyword matching
-    if (input.includes("përshëndetje") || input.includes("hello") || input.includes("hi")) {
+    if (matchesKeyword(input, keywords.greeting)) {
       return getRandomResponse("greeting")
-    } else if (input.includes("rezervim") || input.includes("reservation") || input.includes("book")) {
+    } else if (matchesKeyword(input, keywords.reservation)) {
       return getRandomResponse("reservation")
-    } else if (input.includes("mjek") || input.includes("doctor")) {
+    } else if (matchesKeyword(input, keywords.doctors)) {
       return getRandomResponse("doctors")
-    } else if (input.includes("shërbim") || input.includes("service")) {
+    } else if (matchesKeyword(input, keywords.services)) {
       return getRandomResponse("services")
-    } else if (input.includes("kontakt") || input.includes("contact")) {
+    } else if (matchesKeyword(input, keywords.contact)) {
       return getRandomResponse("contact")
     } else {
       return getRandomResponse("default")
     }
+  }
+
+  // Normalize user input
+  function normalizeInput(input) {
+    return input.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+  }
+
+  // Match keywords
+  function matchesKeyword(input, keywords) {
+    return keywords.some(keyword => {
+      const pattern = new RegExp(`\\b${keyword}\\b`, "i")
+      return pattern.test(input)
+    })
   }
 
   // Toggle chatbot visibility
@@ -124,22 +176,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to send a message
   function sendMessage() {
     const message = userInput.value.trim()
+    if (!message) return
 
-    if (message) {
-      // Add user message to chat
-      addMessage(message, true)
+    // Disable input and send button while bot is typing
+    userInput.disabled = true
+    sendButton.disabled = true
 
-      // Clear input
-      userInput.value = ""
+    addMessage(message, true) // user message
+    userInput.value = ""
 
-      // Simulate bot thinking
-      setTimeout(() => {
-        // Process user input and get response
-        const response = processUserInput(message)
+    // Show typing indicator
+    const typingId = "typing-indicator"
+    const typingDiv = document.createElement("div")
+    typingDiv.className = "message bot"
+    typingDiv.id = typingId
+    typingDiv.textContent = "Typing..."
+    messagesContainer.appendChild(typingDiv)
+    messagesContainer.scrollTop = messagesContainer.scrollHeight
 
-        // Add bot response to chat
-        addMessage(response)
-      }, 500)
-    }
+    setTimeout(() => {
+      // Remove typing indicator
+      const typingElem = document.getElementById(typingId)
+      if (typingElem) typingElem.remove()
+
+      const response = processUserInput(message)
+      addMessage(response)
+
+      // Enable input and send button
+      userInput.disabled = false
+      sendButton.disabled = false
+
+      // Focus input for next message
+      userInput.focus()
+    }, 1000) // 1-second delay for realism
   }
 })
